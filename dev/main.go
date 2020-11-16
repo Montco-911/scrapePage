@@ -34,8 +34,8 @@ func Read(file string, b []byte) (int, error) {
 
 func main() {
 	Open()
-	WriteAppend("/data/junk", "stuff")
+	WriteAppend("/pod-10g/junk", "stuff")
 	b := make([]byte, 300)
-	Read("/data/junk", b)
+	Read("/pod-10g/junk", b)
 	fmt.Printf("b: %s\n", b)
 }

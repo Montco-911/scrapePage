@@ -10,7 +10,7 @@ RUN go mod download
 COPY . /workspace/
 RUN go get -v -t -d ./...
 
-RUN mkdir /data
+RUN mkdir /pod-10g
 
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GO111MODULE=on go build -tags timetzdata -a -o project main.go
 
@@ -22,7 +22,7 @@ WORKDIR /
 COPY --from=builder /workspace/project .
 
 
-COPY --from=builder --chown=65532:65532 /data /data
+COPY --from=builder --chown=65532:65532 /pod-10g /pod-10g
 USER nonroot:nonroot
 
 
