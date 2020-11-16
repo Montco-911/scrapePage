@@ -20,7 +20,7 @@
 
 package main
 
-import "github.com/mchirico/activeIncident/cmd"
+import "github.com/Montco-911/scrapePage/cmd"
 
 func main() {
 	cmd.Execute()
