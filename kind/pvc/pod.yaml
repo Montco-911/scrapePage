@@ -9,10 +9,12 @@ spec:
         claimName: task-pv-claim
   containers:
     - name: task-pv-container
-      image: nginx
+      image: quay.io/mchirico/scrape:test
+      args: ["write"]
+      imagePullPolicy: IfNotPresent
       ports:
         - containerPort: 80
-          name: "http-server"
+          name: "montco"
       volumeMounts:
         - mountPath: "/pod-10g"
           name: task-pv-storage

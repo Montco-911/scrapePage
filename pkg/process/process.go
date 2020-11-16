@@ -37,6 +37,7 @@ func GetJson() ([]byte, error) {
 	return parse.ToJson(c, a)
 
 }
+
 func ShowJson() {
 	a, err := GetJson()
 	if err != nil {
@@ -44,6 +45,25 @@ func ShowJson() {
 	}
 	println(string(a))
 }
+
+func StringJson() string {
+	a, err := GetJson()
+	if err != nil {
+		log.Printf("Error in json")
+	}
+	return string(a)
+}
+
+func WriteAppend(file, txt string) {
+	f, err := os.OpenFile(file,
+		os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	if err != nil {
+		return
+	}
+	defer f.Close()
+	f.Write([]byte(txt))
+}
+
 
 func BuildDb() ([]map[string]string, [][]string, error) {
 
