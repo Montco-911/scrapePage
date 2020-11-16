@@ -18,7 +18,7 @@ docker attach activinc
 # To detach the tty without exiting the shell,
 # use the escape sequence Ctrl-p + Ctrl-q
 
-
+docker exec -ti  kind-worker /bin/bash
 ```
 
 

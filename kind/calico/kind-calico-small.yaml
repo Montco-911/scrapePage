@@ -26,6 +26,9 @@ nodes:
   - containerPort: 5001
     hostPort: 5001
     protocol: TCP
+  extraMounts:
+  - hostPath: /pod-10g/
+    containerPath: /pod-10g
 - role: worker
   extraMounts:
   - hostPath: /pod-10g/
