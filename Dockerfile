@@ -27,7 +27,7 @@ WORKDIR /
 COPY --from=builder /workspace/project .
 
 
-USER nonroot:nonroot
+# USER nonroot:nonroot
 
 
 ENTRYPOINT ["/project"]
