@@ -21,7 +21,7 @@ docker attach activinc
 ```
 
 
-## Don't forget golint
+
 
 
 
