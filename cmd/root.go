@@ -22,7 +22,7 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/mchirico/activeIncident/util"
+	"github.com/Montco-911/scrapePage/pkg/process"
 	"os"
 	"time"
 
@@ -48,7 +48,7 @@ to quickly create a Cobra application.`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 
 		for {
-			util.ShowJson()
+			process.ShowJson()
 			time.Sleep(45 * time.Second)
 		}
 		return nil
