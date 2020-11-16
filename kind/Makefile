@@ -14,6 +14,7 @@ endif
 
 .PHONY: small
 small:
+	kind delete cluster
 	kind create cluster --config calico/kind-calico-small.yaml
 	kubectl apply -f calico/ingress-nginx.yaml
 	kubectl apply -f calico/tigera-operator.yaml
