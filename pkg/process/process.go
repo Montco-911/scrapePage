@@ -57,10 +57,12 @@ func StringJson() string {
 func WriteAppend(file, txt string) {
 	f, err := os.OpenFile(file,
 		os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	defer f.Close()
 	if err != nil {
+		log.Printf("WriteAppend error:%v\n",err)
 		return
 	}
-	defer f.Close()
+
 	f.Write([]byte(txt))
 }
 

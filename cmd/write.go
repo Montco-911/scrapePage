@@ -18,6 +18,7 @@ package cmd
 import (
 	"fmt"
 	"github.com/Montco-911/scrapePage/pkg/process"
+	"log"
 	"time"
 
 	"github.com/spf13/cobra"
@@ -35,10 +36,11 @@ This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
 
-        fmt.Printf("... write")
+        fmt.Printf("... write\n")
 		for {
+			log.Printf("write..\n")
 			process.WriteAppend("/pod-10g/out.json",process.StringJson())
-			time.Sleep(120 * time.Second)
+			time.Sleep(20 * time.Second)
 		}
 
 	},
