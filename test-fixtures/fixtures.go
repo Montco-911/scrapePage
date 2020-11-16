@@ -130,8 +130,6 @@ body content
 </body>
 </html>`
 
-
-
 var detail = `<html>
 <head>
 <title>Montgomery County PA Public Safety - Fire and EMS Comments</title>
@@ -1015,7 +1013,6 @@ background-color:#555555;}
 </body>
 </html>
 `
-
 
 func Page() string {
 	return page
