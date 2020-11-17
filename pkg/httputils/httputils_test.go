@@ -1,7 +1,6 @@
 package httputils
 
 import (
-	"fmt"
 	"testing"
 )
 
@@ -16,6 +15,7 @@ func TestGet(t *testing.T) {
 		t.Fatalf("err: %s\n", err)
 	}
 
-	fmt.Println(string(r))
+	_ = r
+	//fmt.Println(string(r))
 
 }
