@@ -34,3 +34,6 @@ med:
 	kubectl apply -f calico/calicoctl.yaml
 	kubectl apply -f calico/cert-manager.yaml
 
+# kubectl kudo init
+# kubectl kudo install zookeeper
+# kubectl kudo install kafka
