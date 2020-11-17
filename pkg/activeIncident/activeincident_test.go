@@ -16,9 +16,3 @@ func Test_Json(t *testing.T) {
 
 }
 
-//func Test_ProcessJSON(t *testing.T) {
-//	b := process.StringJson()
-//	var a ActiveIncident
-//	json.Unmarshal([]byte(b), &a)
-//	fmt.Println(a)
-//}
