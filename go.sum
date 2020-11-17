@@ -115,10 +115,6 @@ github.com/magiconair/properties v1.8.1/go.mod h1:PppfXfuXeibc/6YijjN8zIbojt8czP
 github.com/mattn/go-colorable v0.0.9/go.mod h1:9vuHe8Xs5qXnSaW/c/ABM9alt+Vo+STaOChaDxuIBZU=
 github.com/mattn/go-isatty v0.0.3/go.mod h1:M+lRXTBqGeGNdLjl/ufCoiOlB5xdOkqRJdNxMWT7Zi4=
 github.com/matttproud/golang_protobuf_extensions v1.0.1/go.mod h1:D8He9yQNgCq6Z5Ld7szi9bcBfOoFv/3dc6xSMkL2PC0=
-github.com/mchirico/activeIncident v0.0.0-20200411111930-e646c167e01f h1:boVGsnw8ipPjNinN1QjcdG4c9Bl53jj/2U/FWWZ1LJg=
-github.com/mchirico/activeIncident v0.0.0-20200411111930-e646c167e01f/go.mod h1:XK8t000ykrC8TQ1VPWn4RNAUmqySTzBkc0ddGmcxUCE=
-github.com/mchirico/tlib v0.0.0-20200127175021-67c50b75d102 h1:Nmc8NPoG5Rfh749cWxtGPfQisIu2SzF1WnRc5t9qVoY=
-github.com/mchirico/tlib v0.0.0-20200127175021-67c50b75d102/go.mod h1:Xam8M9UtKbSyzTD6KTUT9wRjcJNUyZ8HhvT/3mRXEkM=
 github.com/miekg/dns v1.0.14/go.mod h1:W1PPwlIAgtquWBMBEV9nkV9Cazfe8ScdGz/Lj7v3Nrg=
 github.com/mitchellh/cli v1.0.0/go.mod h1:hNIlj7HEI86fIcpObd7a0FcrxTWetlwJDGcceTlRvqc=
 github.com/mitchellh/go-homedir v1.0.0/go.mod h1:SfyaCUpYCn1Vlf4IUYiD9fPX4A5wJrkLzIz1N1q0pr0=
