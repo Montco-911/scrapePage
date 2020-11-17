@@ -22,3 +22,15 @@ small:
 	kubectl apply -f calico/calicoctl.yaml
 	kubectl apply -f calico/cert-manager.yaml
 
+
+
+.PHONY: med
+med:
+	kind delete cluster
+	kind create cluster --config calico/kind-calico-pvc.yaml
+	kubectl apply -f calico/ingress-nginx.yaml
+	kubectl apply -f calico/tigera-operator.yaml
+	kubectl apply -f calico/calicoNetwork.yaml
+	kubectl apply -f calico/calicoctl.yaml
+	kubectl apply -f calico/cert-manager.yaml
+
