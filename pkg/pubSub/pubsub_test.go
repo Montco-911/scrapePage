@@ -4,6 +4,8 @@ import "testing"
 
 func TestProd(t *testing.T) {
 	msg := NewMSG()
-	msg.SetAddress("a")
+	msg.CreateTopic()
+	//msg.SetAddress("a")
 	msg.Prod([]byte("test"))
+	//msg.Reader(0)
 }
