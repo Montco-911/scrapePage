@@ -24,8 +24,8 @@ small:
 
 
 
-.PHONY: med
-med:
+.PHONY: kafka
+kafka:
 	kind delete cluster
 	kind create cluster --config calico/kind-calico-pvc.yaml
 	kubectl apply -f calico/ingress-nginx.yaml
