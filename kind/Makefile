@@ -39,3 +39,16 @@ kafka:
 # kubectl kudo install kafka
 # kubectl apply --kustomize github.com/kubernetes/ingress-nginx/deploy/prometheus/
 # kubectl apply --kustomize github.com/kubernetes/ingress-nginx/deploy/grafana/
+
+
+# Or maybe:
+# https://github.com/prometheus-operator/prometheus-operator
+
+
+# kubectl get svc -n ingress-nginx
+# Ref: https://kubernetes.github.io/ingress-nginx/user-guide/monitoring/
+# kubectl get nodes --selector=kubernetes.io/role!=master -o jsonpath={.items[*].status.addresses[?\(@.type==\"InternalIP\"\)].address}
+
+# 172.18.0.2:30815
+
+
