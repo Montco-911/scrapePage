@@ -37,8 +37,7 @@ kafka:
 # kubectl kudo init
 # kubectl kudo install zookeeper
 # kubectl kudo install kafka
-# kubectl apply --kustomize github.com/kubernetes/ingress-nginx/deploy/prometheus/
-# kubectl apply --kustomize github.com/kubernetes/ingress-nginx/deploy/grafana/
+
 
 
 # Or maybe:
