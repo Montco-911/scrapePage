@@ -35,6 +35,6 @@ spec:
             - containerPort: 2181
               name: zookeeper
           volumeMounts:
-            - mountPath: "/mnt/zookeeper"
+            - mountPath: "/var/lib/zookeeper"
               name: zoo-pv-storage
 
