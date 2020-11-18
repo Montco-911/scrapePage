@@ -13,10 +13,6 @@ spec:
       labels:
         run: broker
     spec:
-      volumes:
-        - name: zoo-pv-storage
-          persistentVolumeClaim:
-            claimName: zoo-pv-claim
       containers:
         - name: broker
           image: confluentinc/cp-kafka:6.0.0
@@ -44,6 +40,5 @@ spec:
           ports:
             - containerPort: 29029
               name: broker
-          volumeMounts:
-            - mountPath: "/var/lib/zookeeper"
-              name: zoo-pv-storage
+
+
