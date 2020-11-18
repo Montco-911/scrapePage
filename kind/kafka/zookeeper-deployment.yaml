@@ -13,6 +13,10 @@ spec:
       labels:
         run: zookeeper
     spec:
+      volumes:
+        - name: zoo-pv-storage
+          persistentVolumeClaim:
+            claimName: zoo-pv-claim
       containers:
         - name: zookeeper
           image: 'confluentinc/cp-zookeeper:6.0.0'
@@ -30,3 +34,7 @@ spec:
           ports:
             - containerPort: 2181
               name: zookeeper
+          volumeMounts:
+            - mountPath: "/var/lib/zookeeper"
+              name: zoo-pv-storage
+
