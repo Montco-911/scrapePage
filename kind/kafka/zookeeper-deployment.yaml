@@ -27,12 +27,24 @@ spec:
         - chown
         - -R
         - 1000:1000
-        - /var/lib/zookeeper
+        - /var/lib/zookeeper/data
         volumeMounts:
         - name: zoo-pv-storage
           mountPath: /var/lib/zookeeper/data
         - name: zoo-log-pv-storage
-          mountPath: /var/lib/zookeeper/log	  
+          mountPath: /var/lib/zookeeper/log
+      - name: zoo-log-storage
+        image: alpine:3
+        command:
+        - chown
+        - -R
+        - 1000:1000
+        - /var/lib/zookeeper/log
+        volumeMounts:
+        - name: zoo-pv-storage
+          mountPath: /var/lib/zookeeper/data
+        - name: zoo-log-pv-storage
+          mountPath: /var/lib/zookeeper/log	  	  
       containers:
         - name: zookeeper
           image: 'confluentinc/cp-zookeeper:6.0.0'
