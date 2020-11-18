@@ -37,19 +37,28 @@ nodes:
     protocol: TCP
   extraMounts:
   - hostPath: /pod-10g/
-    containerPath: /pod-10g    
+    containerPath: /pod-10g
+  - hostPath: /mnt/zookeeper/
+    containerPath: /var/lib/zookeeper        
 - role: worker
   extraMounts:
   - hostPath: /pod-10g/
     containerPath: /pod-10g
+  - hostPath: /mnt/zookeeper/
+    containerPath: /var/lib/zookeeper            
 - role: worker
   extraMounts:
   - hostPath: /pod-10g/
     containerPath: /pod-10g
+  - hostPath: /mnt/zookeeper/
+    containerPath: /var/lib/zookeeper            
 - role: worker
   extraMounts:
   - hostPath: /pod-10g/
     containerPath: /pod-10g
+  - hostPath: /mnt/zookeeper/
+    containerPath: /var/lib/zookeeper
+   
 
 
 
