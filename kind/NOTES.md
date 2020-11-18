@@ -22,6 +22,11 @@ helm repo update
 helm install kube-prometheus-stack prometheus-community/kube-prometheus-stack --namespace prometheus
 
 
+kubectl-ns prometheus
 
+
+k get secrets kube-prometheus-stack-grafana -o yaml
+
+openssl base64 -d
 
 ```
