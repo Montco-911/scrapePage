@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pub-pod
+spec:
+  containers:
+    - name: pub-container
+      image: quay.io/mchirico/scrape:test
+      args: ["pub"]
+      imagePullPolicy: IfNotPresent
+      ports:
+        - containerPort: 8080
+          name: "pub"
+
