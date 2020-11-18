@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: zoo-pv-claim
+  name: zoo-log-pv-claim
 spec:
   storageClassName: manual
   accessModes:

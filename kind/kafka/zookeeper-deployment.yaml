@@ -17,6 +17,9 @@ spec:
         - name: zoo-pv-storage
           persistentVolumeClaim:
             claimName: zoo-pv-claim
+        - name: zoo-log-pv-storage
+          persistentVolumeClaim:
+            claimName: zoo-log-pv-claim	    
       initContainers:
       - name: zoo-pv-storage
         image: alpine:3
@@ -27,7 +30,9 @@ spec:
         - /var/lib/zookeeper
         volumeMounts:
         - name: zoo-pv-storage
-          mountPath: /var/lib/zookeeper
+          mountPath: /var/lib/zookeeper/data
+        - name: zoo-log-pv-storage
+          mountPath: /var/lib/zookeeper/log	  
       containers:
         - name: zookeeper
           image: 'confluentinc/cp-zookeeper:6.0.0'
@@ -46,6 +51,8 @@ spec:
             - containerPort: 2181
               name: zookeeper
           volumeMounts:
-            - mountPath: "/var/lib/zookeeper"
+            - mountPath: "/var/lib/zookeeper/data"
               name: zoo-pv-storage
+            - mountPath: "/var/lib/zookeeper/log"
+              name: zoo-log-pv-storage	      
 
