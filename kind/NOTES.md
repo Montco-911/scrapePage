@@ -29,4 +29,10 @@ k get secrets kube-prometheus-stack-grafana -o yaml
 
 openssl base64 -d
 
+
+
+# Default user/password is: admin/prom-operator
+
+kubectl port-forward svc/kube-prometheus-stack-grafana 8080:80
+
 ```
