@@ -9,3 +9,7 @@ kubectl exec --stdin --tty zookeeper-5cdcd9f4f-mldzh -- /bin/bash
 
 
 ```
+
+dataDir=/var/lib/zookeeper/data
+dataLogDir=/var/lib/zookeeper/log
+
