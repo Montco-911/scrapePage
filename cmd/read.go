@@ -17,6 +17,9 @@ package cmd
 
 import (
 	"fmt"
+	"github.com/Montco-911/scrapePage/pkg/pubSub"
+	"log"
+	"time"
 
 	"github.com/spf13/cobra"
 )
@@ -33,6 +36,16 @@ This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("read called")
+
+		fmt.Printf("... read\n")
+		for {
+			log.Printf("read..\n")
+			pub := pubSub.NewMSG()
+			pub.SetAddress("broker:9092")
+			pub.Reader(0)
+			time.Sleep(50 * time.Second)
+		}
+
 	},
 }
 

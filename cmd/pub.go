@@ -17,8 +17,11 @@ package cmd
 
 import (
 	"fmt"
-
+	"github.com/Montco-911/scrapePage/pkg/process"
+	"github.com/Montco-911/scrapePage/pkg/pubSub"
 	"github.com/spf13/cobra"
+	"log"
+	"time"
 )
 
 // pubCmd represents the pub command
@@ -32,7 +35,14 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("pub called")
+		fmt.Printf("... pub\n")
+		for {
+			log.Printf("write..\n")
+			pub := pubSub.NewMSG()
+			pub.SetAddress("broker:9092")
+			pub.Prod([]byte(process.StringJson()))
+			time.Sleep(20 * time.Second)
+		}
 	},
 }
 
